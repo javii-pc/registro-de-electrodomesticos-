@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class Electrodomesticos {
 
-    public static void main(String[] args) {
-        //creando arreglo de estudintes 
-        electrodomestico datos[] = new electrodomestico[15];
-        //menu para gaurdar estudiantes
+    public static void main(String[] args)  
+        electrodomestico datos[] = new electrodomestico[15]
+    
         int op = 0;
         Scanner teclado = new Scanner(System.in);
         Scanner letras = new Scanner(System.in);
@@ -22,7 +21,7 @@ public class Electrodomesticos {
             System.out.println("Ingrese el numero de opcion ");
 
             op = teclado.nextInt();
-            //opcion uno de nuevo alumno
+           
             if (op == 1) {
                 System.out.println("-------------------------------");
                 System.out.println("Ingrese el codigo");
@@ -35,7 +34,7 @@ public class Electrodomesticos {
                 String marca = letras.nextLine();
                 System.out.println("-------------------------------");
                 System.out.println(nuevoElectrodomestico(codigo, nombre, marca, datos));
-                //opcion dos ver todos los alumnos registrados 
+             
             } else if (op == 2) {
                 System.out.println("------------------------");
                 System.out.println("Ingrese el codigo ");
@@ -67,7 +66,7 @@ public class Electrodomesticos {
 
     }
 
-    //guardar alumnos y ver que las claves no se repitan 
+  
     public static String nuevoElectrodomestico(int codigo, String nombre, String marca, electrodomestico arreglo[]) {
         boolean lleno = true;
         for (int i = 0; i < arreglo.length; i++) {
