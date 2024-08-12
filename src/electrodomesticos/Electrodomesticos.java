@@ -47,13 +47,16 @@ public class Electrodomesticos {
             } else if (op == 4) {
                 System.out.println("----------------------------");
                 System.out.println("Ingrese el codigo ");
-                int clave = teclado.nextInt();
-                if (buscarelectrodomestico2(clave, datos)) {
+                int codigo = teclado.nextInt();
+                if (buscarelectrodomestico2(codigo, datos)) {
                     System.out.println("Ingrese el nuevo nombre ");
                     String nombre = letras.nextLine();
                     System.out.println("-------------------------------");
                     System.out.println("Ingrese la nueva marca");
-                    String grado = letras.nextLine();
+                    String marca = letras.nextLine();
+                    System.out.println("--------------------------------");
+                    System.out.println(modificardatos(codigo,nombre,marca,datos));
+                    
 
                 } else {
                     System.out.println("el codigo no existe ");
